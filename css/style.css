@@ -1,0 +1,75 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    font-family: sans-serif;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    padding: 10px;
+}
+
+.row {
+    max-width: 960px;
+    overflow: auto;
+    margin: auto;
+}
+
+.frame {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+
+.picture img {
+    width: 100%;
+    border: #e3e3e3 solid 2px;
+}
+
+.picture {
+    position: relative;
+}
+
+.picture:after {
+  content: "";
+  position: absolute;
+  right: 4px;
+  bottom: -5px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: #E3E3E3 transparent transparent transparent;
+}
+
+figcaption {
+    color: #aaa;
+    margin-top: 5px;
+    padding: 10px 0;
+
+    font-weight: 600;
+
+    /* Border and padding is stealing 4px + 20px */
+    height: 49px;
+    border-bottom: #E3E3E3 solid 4px;
+
+    /* Try to center text vertically */
+    line-height: 24px;
+}
+
+figcaption strong {
+    color: #777;
+}
+
+.author {
+    float: right;
+}
+
+.author img {
+    height: 25px;
+    border-radius: 4px;
+    vertical-align: middle;
+}
