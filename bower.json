@@ -1,0 +1,21 @@
+{
+  "name": "octocat",
+  "version": "0.0.0",
+  "homepage": "https://github.com/rtablada/exercise-grids",
+  "authors": [
+    "Ryan Tablada <ryan.tablada@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reset-css": "~2.0.2011012602",
+    "fontawesome": "~4.3.0",
+    "neat": "~1.7.2"
+  }
+}

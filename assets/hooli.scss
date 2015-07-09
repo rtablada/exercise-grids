@@ -1,6 +1,15 @@
+@import 'reset-css/reset';
+
+$tablet: max-width 1024px;
+$mobile: max-width 480px;
+$gutter: 5em;
+
+@import 'bourbon';
+@import 'neat';
+
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
-    font-family: sans-serif;
+  font-family: sans-serif;
   box-sizing: border-box;
 }
 *, *:before, *:after {
@@ -12,19 +21,27 @@ body {
 }
 
 .row {
-    max-width: 960px;
-    overflow: auto;
-    margin: auto;
+  @include row();
+  @include outer-container(960px);
 }
 
 .frame {
-    float: left;
-    width: 33.33%;
-    padding: 10px;
+  @include span-columns(4);
+
+  margin-bottom: 1em;
+
+  @include media($tablet) {
+    @include span-columns(6);
+    @include omega(even);
+  }
+  @include media($mobile) {
+    @include span-columns(12);
+    @include omega(n);
+  }
 }
 
 .picture img {
-    width: 100%;
+    @include fill-parent;
     border: #e3e3e3 solid 2px;
 }
 
