@@ -1,0 +1,150 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  font-family: sans-serif;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  padding: 10px; }
+
+.row {
+  display: block;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto; }
+  .row::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .row::after {
+    clear: both;
+    content: "";
+    display: table; }
+  @media screen and (max-width: 1024px) {
+    .row {
+      padding: 4.72458%; } }
+
+.frame {
+  float: left;
+  display: block;
+  margin-right: 4.72458%;
+  width: 30.18362%;
+  margin-bottom: 1em; }
+  .frame:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 1024px) {
+    .frame {
+      float: left;
+      display: block;
+      margin-right: 4.72458%;
+      width: 47.63771%; }
+      .frame:last-child {
+        margin-right: 0; }
+      .frame:nth-child(even) {
+        margin-right: 0; } }
+  @media screen and (max-width: 480px) {
+    .frame {
+      float: left;
+      display: block;
+      margin-right: 4.72458%;
+      width: 100%; }
+      .frame:last-child {
+        margin-right: 0; }
+      .frame:nth-child(n) {
+        margin-right: 0; } }
+
+.picture img {
+  width: 100%;
+  border: #e3e3e3 solid 2px; }
+
+.picture {
+  position: relative; }
+
+.picture:after {
+  content: "";
+  position: absolute;
+  right: 4px;
+  bottom: -5px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: #E3E3E3 transparent transparent transparent; }
+
+figcaption {
+  color: #aaa;
+  margin-top: 5px;
+  padding: 10px 0;
+  font-weight: 600;
+  /* Border and padding is stealing 4px + 20px */
+  height: 49px;
+  border-bottom: #E3E3E3 solid 4px;
+  /* Try to center text vertically */
+  line-height: 24px; }
+
+figcaption strong {
+  color: #777; }
+
+.author {
+  float: right; }
+
+.author img {
+  height: 25px;
+  border-radius: 4px;
+  vertical-align: middle; }
